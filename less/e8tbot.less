@@ -1,0 +1,221 @@
+@import "variables.less";
+@import "mixins.less";
+
+// Global Components
+html,
+body {
+    height: 100%;
+    width: 100%;
+    @media (min-width: 768px) { // Ipad
+        overflow-y: hidden;
+    }
+    @media (min-width: 992px) { // Desktop
+        overflow-y: hidden;
+    }
+}
+
+body {
+    .body-font;
+}
+
+
+a {
+    .transition-all;
+    color: @theme-primary;
+    &:hover,
+    &:focus {
+        color: darken(@theme-primary, 10%);
+    }
+}
+
+hr {
+    max-width: 100px;
+    margin: 25px auto 0;
+    border-width: 1px;
+    border-color: fade(@gray-darker, 10%);
+}
+
+hr.light {
+    border-color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    .heading-font;
+    color: #4E595D;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+// Homepage Header
+
+.invisible {
+    visibility: hidden;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    /*
+    background: url("../img/bg-pattern.png"), @theme-secondary; // fallback for old browsers
+    background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary); // Chrome 10-25, Safari 5.1-6
+    background: url("../img/bg-pattern.png"), linear-gradient(to left, @theme-secondary , @theme-tertiary); // W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
+    */
+    color: white;
+    .header-content {
+        text-align: center;
+        padding: 0px 0 50px;
+        position: relative;
+        .header-content-inner {
+            position: relative;
+            max-width: 500px;
+            margin: 0 auto;
+            h1 {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: 30px;
+            }
+            h1:after {
+                display: inline-block;
+                content: "";
+                height: 60px;
+                width: 60px;
+                background: url('../img/e8t-logo.png') no-repeat 0 0;
+                background-size: 100%;
+                vertical-align: -50%;
+            }
+            hr.bar {
+                border-color: gray;
+                margin-top: 10px;
+                border-width: 3px;
+                max-width: 50px;
+            }
+            h3 {
+                margin-top: 20px;
+            }
+        }
+    }
+    .img-responsive.device {
+        margin: 0 auto 100px;
+        max-width: 300px;
+        max-height: 550px;
+    }
+    @media (min-width: 768px) { // Ipad
+        min-height: 100%;
+        .header-content {
+            text-align: left;
+            padding: 0;
+            height: 300vh;
+            .header-content-inner {
+                max-width: none;
+                margin: 0;
+                position: absolute;
+                top: 10%;
+                transform: translateY(-50%);
+                h1 {
+                    font-size: 35px;
+                }
+                hr.bar {
+                    margin-left: 0;
+                }
+            }
+        }
+        .img-responsive.device {
+            margin-top: 50px;
+            max-height: 550px;
+        }
+    }
+    @media (min-width: 992px) { // Desktop
+        .header-content {
+            .header-content-inner {
+                top: 15%;
+                h1 {
+                    font-size: 50px;
+                }
+                h1:after {
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
+
+// Bootstrap Overrides
+
+.bg-primary {
+    background: @theme-primary;
+    background: -webkit-linear-gradient(@theme-primary , darken(@theme-primary, 5%));
+    background: linear-gradient(@theme-primary , darken(@theme-primary, 5%));
+}
+
+.text-primary {
+    color: @theme-primary;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+// Button Styles
+.btn-outline {
+    color: gray;
+    border-color: white;
+    border: 1px solid;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: white;
+        background-color: @theme-primary;
+        border-color: @theme-primary;
+    }
+}
+
+.btn {
+    .alt-font;
+    border-radius: 300px;
+}
+
+.btn-xl {
+    padding: 15px 45px;
+    font-size: 11px;
+}
+
+// Extras
+// -- Highlight Color Customization
+::-moz-selection {
+    color: white;
+    text-shadow: none;
+    background: @gray-darker;
+}
+
+::selection {
+    color: white;
+    text-shadow: none;
+    background: @gray-darker;
+}
+
+img::selection {
+    color: white;
+    background: transparent;
+}
+
+img::-moz-selection {
+    color: white;
+    background: transparent;
+}
+
+body {
+    webkit-tap-highlight-color: @gray-darker;
+}
