@@ -102,6 +102,9 @@ header {
             h3 {
                 margin-top: 20px;
             }
+            .icon {
+                max-width: 20px;
+            }
         }
     }
     .img-responsive.device.before {
@@ -194,8 +197,8 @@ header {
     &:active,
     &.active {
         color: white;
-        background-color: @theme-primary;
-        border-color: @theme-primary;
+        background-color: lighten(@gray-light, 30%);
+        border-color: lighten(@gray-light, 30%);
     }
 }
 

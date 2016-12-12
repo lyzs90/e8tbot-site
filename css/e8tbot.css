@@ -118,6 +118,9 @@ header .header-content .header-content-inner hr.bar {
 header .header-content .header-content-inner h3 {
   margin-top: 20px;
 }
+header .header-content .header-content-inner .icon {
+  max-width: 20px;
+}
 header .img-responsive.device.before {
   position: absolute;
   z-index: 2;
@@ -201,8 +204,8 @@ header .img-responsive.device {
 .btn-outline:active,
 .btn-outline.active {
   color: white;
-  background-color: #e57501;
-  border-color: #e57501;
+  background-color: #c4c4c4;
+  border-color: #c4c4c4;
 }
 .btn {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
