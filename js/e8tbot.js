@@ -19,6 +19,10 @@
             $("#animateObj4").removeClass("invisible");
             $("#animateObj4").addClass("animated gray fadeIn");
         }, 3500);
+        setTimeout(function(){
+            $("#animateObj5").removeClass("invisible");
+            $("#animateObj5").addClass("animated gray fadeIn");
+        }, 4500);
     });
 
 })(jQuery); // End of use strict

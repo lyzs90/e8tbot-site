@@ -94,7 +94,7 @@ header {
                 vertical-align: -50%;
             }
             hr.bar {
-                border-color: gray;
+                border-color: @theme-primary;
                 margin-top: 10px;
                 border-width: 3px;
                 max-width: 50px;
@@ -104,10 +104,17 @@ header {
             }
         }
     }
+    .img-responsive.device.before {
+        position: absolute;
+        z-index: 2;
+        marign: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
     .img-responsive.device {
-        margin: 0 auto 100px;
-        max-width: 300px;
-        max-height: 550px;
+        margin: 0 auto 48px;
+        max-width: 298px;
     }
     @media (min-width: 768px) { // Ipad
         min-height: 100%;
@@ -129,9 +136,13 @@ header {
                 }
             }
         }
+        .img-responsive.device.before {
+            margin: 0 auto;
+            top: 95px;
+            left: 15px
+        }
         .img-responsive.device {
-            margin-top: 50px;
-            max-height: 550px;
+            margin: 50px 0px 48px 0px;
         }
     }
     @media (min-width: 992px) { // Desktop
@@ -146,6 +157,12 @@ header {
                     width: 100px;
                 }
             }
+        }
+        .img-responsive.device.before {
+            bottom: 48px;
+            left: 28px;
+            right: 0;
+            margin: 0;
         }
     }
 }

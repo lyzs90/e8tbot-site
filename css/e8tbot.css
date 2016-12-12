@@ -1,7 +1,7 @@
 /*!
- * Start Bootstrap - E-8T Website v1.0.0 (https://lyzs90.github.io/e8tbot)
+ * Start Bootstrap - E-8T Website v1.0.0 (https://lyzs90.github.io/e8tbot-site)
  * Copyright 2013-2016 lyzs90
- * Licensed under MIT (https://github.com/lyzs90/e8tbot/LICENSE)
+ * Licensed under MIT (https://github.com/lyzs90/e8tbot-site/LICENSE)
  */
 .heading-font {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
@@ -110,7 +110,7 @@ header .header-content .header-content-inner h1:after {
   vertical-align: -50%;
 }
 header .header-content .header-content-inner hr.bar {
-  border-color: gray;
+  border-color: #e57501;
   margin-top: 10px;
   border-width: 3px;
   max-width: 50px;
@@ -118,10 +118,17 @@ header .header-content .header-content-inner hr.bar {
 header .header-content .header-content-inner h3 {
   margin-top: 20px;
 }
+header .img-responsive.device.before {
+  position: absolute;
+  z-index: 2;
+  marign: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 header .img-responsive.device {
-  margin: 0 auto 100px;
-  max-width: 300px;
-  max-height: 550px;
+  margin: 0 auto 48px;
+  max-width: 298px;
 }
 @media (min-width: 768px) {
   header {
@@ -145,9 +152,13 @@ header .img-responsive.device {
   header .header-content .header-content-inner hr.bar {
     margin-left: 0;
   }
+  header .img-responsive.device.before {
+    margin: 0 auto;
+    top: 95px;
+    left: 15px;
+  }
   header .img-responsive.device {
-    margin-top: 50px;
-    max-height: 550px;
+    margin: 50px 0px 48px 0px;
   }
 }
 @media (min-width: 992px) {
@@ -160,6 +171,12 @@ header .img-responsive.device {
   header .header-content .header-content-inner h1:after {
     height: 100px;
     width: 100px;
+  }
+  header .img-responsive.device.before {
+    bottom: 48px;
+    left: 28px;
+    right: 0;
+    margin: 0;
   }
 }
 .bg-primary {
