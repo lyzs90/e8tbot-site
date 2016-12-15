@@ -61,6 +61,11 @@ p {
     visibility: hidden;
 }
 
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
 header {
     position: relative;
     width: 100%;
@@ -114,58 +119,60 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
+        top: 46px;
     }
     .img-responsive.device {
-        margin: 0 auto 48px;
+        margin: 0 auto;
         max-width: 298px;
     }
     @media (min-width: 768px) { // Ipad
         min-height: 100%;
-        .header-content {
-            text-align: left;
-            padding: 0;
-            height: 300vh;
-            .header-content-inner {
-                max-width: none;
-                margin: 0;
-                position: absolute;
-                top: 10%;
-                transform: translateY(-50%);
-                h1 {
-                    font-size: 35px;
-                }
-                hr.bar {
-                    margin-left: 0;
+        .row {
+            display: flex;
+            flex-direction: row;
+            .header-content {
+                text-align: left;
+                padding: 0;
+                height: 300vh;
+                .header-content-inner {
+                    max-width: none;
+                    margin: 0;
+                    position: absolute;
+                    top: 5%;
+                    h1 {
+                        font-size: 35px;
+                    }
+                    hr.bar {
+                        margin-left: 0;
+                    }
                 }
             }
-        }
-        .img-responsive.device.before {
-            margin: 0 auto;
-            top: 95px;
-            left: 15px
-        }
-        .img-responsive.device {
-            margin: 50px 0px 48px 0px;
+            .img-responsive.device.before {
+                margin: 0 auto;
+                top: 95px;
+                left: 5%;
+            }
+            .img-responsive.device {
+                margin: 50px auto 48px;
+            }
         }
     }
     @media (min-width: 992px) { // Desktop
-        .header-content {
-            .header-content-inner {
-                top: 15%;
-                h1 {
-                    font-size: 50px;
-                }
-                h1:after {
-                    height: 100px;
-                    width: 100px;
+        .row {
+            .header-content {
+                .header-content-inner {
+                    h1 {
+                        font-size: 50px;
+                    }
+                    h1:after {
+                        height: 100px;
+                        width: 100px;
+                    }
                 }
             }
-        }
-        .img-responsive.device.before {
-            bottom: 48px;
-            left: 28px;
-            right: 0;
-            margin: 0;
+            .img-responsive.device.before {
+                left: 0;
+            }
         }
     }
 }

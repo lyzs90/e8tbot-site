@@ -74,6 +74,10 @@ p {
 .invisible {
   visibility: hidden;
 }
+.row {
+  display: flex;
+  flex-direction: column;
+}
 header {
   position: relative;
   width: 100%;
@@ -128,58 +132,56 @@ header .img-responsive.device.before {
   left: 0;
   right: 0;
   bottom: 0;
+  top: 46px;
 }
 header .img-responsive.device {
-  margin: 0 auto 48px;
+  margin: 0 auto;
   max-width: 298px;
 }
 @media (min-width: 768px) {
   header {
     min-height: 100%;
   }
-  header .header-content {
+  header .row {
+    display: flex;
+    flex-direction: row;
+  }
+  header .row .header-content {
     text-align: left;
     padding: 0;
     height: 300vh;
   }
-  header .header-content .header-content-inner {
+  header .row .header-content .header-content-inner {
     max-width: none;
     margin: 0;
     position: absolute;
-    top: 10%;
-    transform: translateY(-50%);
+    top: 5%;
   }
-  header .header-content .header-content-inner h1 {
+  header .row .header-content .header-content-inner h1 {
     font-size: 35px;
   }
-  header .header-content .header-content-inner hr.bar {
+  header .row .header-content .header-content-inner hr.bar {
     margin-left: 0;
   }
-  header .img-responsive.device.before {
+  header .row .img-responsive.device.before {
     margin: 0 auto;
     top: 95px;
-    left: 15px;
+    left: 5%;
   }
-  header .img-responsive.device {
-    margin: 50px 0px 48px 0px;
+  header .row .img-responsive.device {
+    margin: 50px auto 48px;
   }
 }
 @media (min-width: 992px) {
-  header .header-content .header-content-inner {
-    top: 15%;
-  }
-  header .header-content .header-content-inner h1 {
+  header .row .header-content .header-content-inner h1 {
     font-size: 50px;
   }
-  header .header-content .header-content-inner h1:after {
+  header .row .header-content .header-content-inner h1:after {
     height: 100px;
     width: 100px;
   }
-  header .img-responsive.device.before {
-    bottom: 48px;
-    left: 28px;
-    right: 0;
-    margin: 0;
+  header .row .img-responsive.device.before {
+    left: 0;
   }
 }
 .bg-primary {
